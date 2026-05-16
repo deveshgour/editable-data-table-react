@@ -147,6 +147,11 @@ export default function VirtualizedTable({ height }: VirtualizedTableProps) {
   const someSelected = selectedRowIds.length > 0 && !allSelected;
 
   const tableHeight = height - HEADER_HEIGHT;
+  
+  const tableWidth = useMemo(
+    () => visibleColumns.reduce((sum, col) => sum + (col.width || 150), 0),
+    [visibleColumns]
+  );
 
   return (
     <Paper
@@ -175,7 +180,7 @@ export default function VirtualizedTable({ height }: VirtualizedTableProps) {
           itemSize={ROW_HEIGHT}
           itemData={itemData}
           overscanCount={5}
-          style={{ overflowX: 'hidden' }}
+          style={{ minWidth: tableWidth, overflowX: 'hidden' }}
         >
           {TableRowComponent}
         </List>
