@@ -5,7 +5,7 @@
  */
 
 import { createSelector } from 'reselect';
-import { RootState, EmployeeRow } from '@/types';
+import { RootState } from '@/types';
 import { filterRows } from '@/utils/filtering';
 import { multiColumnSort } from '@/utils/sorting';
 

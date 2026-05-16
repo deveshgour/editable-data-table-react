@@ -3,7 +3,7 @@
  * and multi-column sort configurations.
  */
 
-import { FilterState, SortConfig } from '@/types';
+import { FilterState } from '@/types';
 import { FilterAction } from '../actions/filterActions';
 import {
   SET_GLOBAL_SEARCH, SET_COLUMN_FILTER, CLEAR_COLUMN_FILTER,

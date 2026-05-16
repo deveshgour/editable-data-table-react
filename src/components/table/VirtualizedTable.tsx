@@ -19,7 +19,6 @@ import {
   selectEditDrafts,
   selectEditingRowIds,
   selectSelectedRowIds,
-  selectOriginalRows,
 } from '@/redux/selectors/tableSelectors';
 import { selectSortConfig } from '@/redux/selectors/filterSelectors';
 import { selectVisibleColumns } from '@/redux/selectors/uiSelectors';
@@ -51,7 +50,6 @@ export default function VirtualizedTable({ height }: VirtualizedTableProps) {
   const editDrafts = useAppSelector(selectEditDrafts);
   const editingRowIds = useAppSelector(selectEditingRowIds);
   const selectedRowIds = useAppSelector(selectSelectedRowIds);
-  const originalRows = useAppSelector(selectOriginalRows);
   const sortConfig = useAppSelector(selectSortConfig);
   const visibleColumns = useAppSelector(selectVisibleColumns);
 

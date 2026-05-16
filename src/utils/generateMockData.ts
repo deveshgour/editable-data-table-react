@@ -40,8 +40,6 @@ const DEPARTMENTS = [
   'Data Science', 'DevOps', 'Quality Assurance', 'Research', 'Business Development',
 ];
 
-const STATUSES: EmployeeStatus[] = ['Active', 'Inactive', 'On Leave', 'Terminated'];
-
 const EMAIL_DOMAINS = [
   'company.com', 'corp.io', 'enterprise.co', 'workspace.dev', 'team.org',
 ];

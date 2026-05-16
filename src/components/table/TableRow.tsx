@@ -39,6 +39,17 @@ function TableRowComponent({ index, style, data }: TableRowProps) {
   } = data;
 
   const rowId = rowIds[index];
+
+  const handleUpdateDraft = useCallback(
+    (field: string, value: string | number) => {
+      if (rowId) onUpdateDraft(rowId, field, value);
+    },
+    [rowId, onUpdateDraft]
+  );
+
+  const handleSave = useCallback(() => { if (rowId) onSaveRow(rowId); }, [rowId, onSaveRow]);
+  const handleCancel = useCallback(() => { if (rowId) onCancelEditing(rowId); }, [rowId, onCancelEditing]);
+
   if (!rowId) return null;
 
   const isEditing = editingRowIds.includes(rowId);
@@ -48,16 +59,6 @@ function TableRowComponent({ index, style, data }: TableRowProps) {
   if (!row) return null;
 
   const isDirty = !!editDrafts[rowId] || isEditing;
-
-  const handleUpdateDraft = useCallback(
-    (field: string, value: string | number) => {
-      onUpdateDraft(rowId, field, value);
-    },
-    [rowId, onUpdateDraft]
-  );
-
-  const handleSave = useCallback(() => onSaveRow(rowId), [rowId, onSaveRow]);
-  const handleCancel = useCallback(() => onCancelEditing(rowId), [rowId, onCancelEditing]);
 
   const renderCell = (col: ColumnDefinition) => {
     const fieldValue = row[col.field as keyof EmployeeRow];

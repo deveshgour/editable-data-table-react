@@ -5,7 +5,7 @@
  * Provides delete and export actions for selected rows.
  */
 
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import {
   Box, Button, Typography, Dialog, DialogTitle,
   DialogContent, DialogActions, DialogContentText,

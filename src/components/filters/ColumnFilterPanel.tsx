@@ -6,7 +6,7 @@
  */
 
 import React, { useCallback } from 'react';
-import { Box, Button, Collapse, Divider, Paper, Typography } from '@mui/material';
+import { Box, Button, Collapse, Paper, Typography } from '@mui/material';
 import ClearAllIcon from '@mui/icons-material/ClearAll';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { useAppDispatch } from '@/hooks/useAppDispatch';

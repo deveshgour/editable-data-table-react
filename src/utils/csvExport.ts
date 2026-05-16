@@ -18,9 +18,6 @@ export function exportToCSV(
 ): void {
   if (rows.length === 0) return;
 
-  /* Define column order and human-readable headers */
-  const fields = ['id', 'name', 'email', 'department', 'salary', 'quantity', 'experience', 'status', 'createdAt'];
-
   /* Map rows to plain objects with formatted values */
   const data = rows.map((row) => ({
     ID: row.id,

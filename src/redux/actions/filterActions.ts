@@ -2,7 +2,7 @@
  * Action creators for filter/sort state changes.
  */
 
-import { ColumnFilter, SortConfig, SortDirection } from '@/types';
+import { ColumnFilter, SortConfig } from '@/types';
 import {
   SET_GLOBAL_SEARCH, SET_COLUMN_FILTER, CLEAR_COLUMN_FILTER,
   CLEAR_ALL_FILTERS, ADD_SORT_CONFIG, REMOVE_SORT_CONFIG,

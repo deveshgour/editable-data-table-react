@@ -4,7 +4,7 @@
  * NumericRangeFilter — min/max range filter for numeric columns.
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, TextField, Typography } from '@mui/material';
 import { useDebounce } from '@/hooks/useDebounce';
 

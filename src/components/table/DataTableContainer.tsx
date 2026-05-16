@@ -6,13 +6,13 @@
  * the overall table layout and lifecycle.
  */
 
-import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Box, Snackbar, Alert } from '@mui/material';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { setRows, setStatus, saveDraft, undoRow } from '@/redux/actions/tableActions';
+import { setRows, setStatus, saveDraft } from '@/redux/actions/tableActions';
 import { hideSnackbar, setTheme } from '@/redux/actions/uiActions';
 import {
   selectTableStatus,

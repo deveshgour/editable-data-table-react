@@ -5,7 +5,7 @@
  * theme toggle, column visibility, and row count display.
  */
 
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback } from 'react';
 import { Box, Typography, Chip, IconButton, Tooltip, Divider } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import KeyboardIcon from '@mui/icons-material/Keyboard';

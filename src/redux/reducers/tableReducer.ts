@@ -3,7 +3,7 @@
  * and undo state using manual immutable spread-based updates.
  */
 
-import { TableState, EmployeeRow } from '@/types';
+import { TableState } from '@/types';
 import { TableAction } from '../actions/tableActions';
 import {
   SET_ROWS, SET_STATUS, SET_ERROR,
